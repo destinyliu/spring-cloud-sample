@@ -13,9 +13,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>store-merchandise-service</module>
-        <module>store-transaction-service</module>
-        <module>store-order-service</module>
+        <module>commodity-service</module>
+        <module>transaction-service</module>
+        <module>order-service</module>
     </modules>
 
 
