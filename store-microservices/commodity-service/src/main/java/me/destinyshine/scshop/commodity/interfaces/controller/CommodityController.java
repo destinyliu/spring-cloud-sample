@@ -3,6 +3,7 @@ package me.destinyshine.scshop.commodity.interfaces.controller;
 import java.util.List;
 
 import me.destinyshine.scshop.commodity.interfaces.dto.CommodityDTO;
+import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
