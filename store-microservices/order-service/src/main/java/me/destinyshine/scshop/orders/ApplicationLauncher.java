@@ -1,18 +1,18 @@
-package me.destinyshine.scshop.users;
+package me.destinyshine.scshop.orders;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
  * @author destinyliu
  */
 @EnableAutoConfiguration
 @SpringBootApplication
-@EnableOAuth2Sso
-@EnableZuulProxy
+@EnableDiscoveryClient
+@EnableCircuitBreaker
 public class ApplicationLauncher {
 
     public static void main(String[] args) {

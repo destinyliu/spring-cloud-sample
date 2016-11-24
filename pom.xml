@@ -10,6 +10,7 @@
         <module>store-website</module>
         <module>store-webadmin</module>
         <module>store-microservices</module>
+        <module>framework</module>
     </modules>
 
     <parent>
@@ -37,17 +38,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-config</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
-        </dependency>
-    </dependencies>
-
     <build>
         <pluginManagement>
             <plugins>
