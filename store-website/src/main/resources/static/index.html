@@ -1,0 +1,46 @@
+<html>
+<head>
+    <script src="/ref/vue.js"></script>
+
+</head>
+<body>
+<div id="app">
+    推荐商品
+    <li v-for="commodity in recommendedList">
+        {{commodity.title}}&nbsp;{{commodity.price}}
+    </li>
+    <p></p>
+    商品列表
+    <li v-for="commodity in commodities">
+        {{commodity.title}}&nbsp;{{commodity.price}}
+    </li>
+</div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            recommendedList: [{
+                title: "xx",
+                price: "1.12"
+            }, {
+                title: "ss",
+                price: "2.12"
+            }, {
+                title: "aa",
+                price: "3.12"
+            }],
+            commodities: [{
+                title: "c1",
+                price: "12.12"
+            }, {
+                title: "c2",
+                price: "13.12"
+            }, {
+                title: "c3",
+                price: "14.12"
+            }]
+        }
+    })
+</script>
+</html>
