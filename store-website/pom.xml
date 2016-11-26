@@ -10,7 +10,7 @@
         <relativePath>../</relativePath>
     </parent>
 
-    <artifactId>store-site</artifactId>
+    <artifactId>store-website</artifactId>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
