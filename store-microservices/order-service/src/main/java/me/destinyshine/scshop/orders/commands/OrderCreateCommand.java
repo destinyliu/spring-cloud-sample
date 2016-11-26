@@ -46,6 +46,8 @@ public class OrderCreateCommand {
 
         private int  quantity;
 
+        private int commodityVersion;
+
         public Long getCommodityId() {
             return commodityId;
         }
@@ -60,6 +62,14 @@ public class OrderCreateCommand {
 
         public void setQuantity(int quantity) {
             this.quantity = quantity;
+        }
+
+        public int getCommodityVersion() {
+            return commodityVersion;
+        }
+
+        public void setCommodityVersion(int commodityVersion) {
+            this.commodityVersion = commodityVersion;
         }
     }
 }
