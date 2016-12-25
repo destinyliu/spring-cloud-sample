@@ -11,9 +11,9 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 
 zuul:
-  stripPrefix: false
   ignoredServices: '*'
   routes:
     commodity-api:
-     serviceId: commodity-service
-     path: /commodities/**
+      serviceId: commodity-service
+      path: /commodities/**
+      stripPrefix: false

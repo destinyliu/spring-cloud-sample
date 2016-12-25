@@ -1,6 +1,7 @@
 <html>
 <head>
     <script src="/ref/vue.js"></script>
+    <script src="/ref/vue-resource.js"></script>
 
 </head>
 <body>
@@ -17,30 +18,34 @@
 </div>
 </body>
 <script>
+    var actionMethods = {
+
+        loadRecommended: function () {
+
+            this.$http.get('commodities/recommended').then(function (response) {
+                console.log(response.body);
+                this.recommendedList = response.body;
+            }, function (response) {
+                // error callback
+            });
+        }
+    };
     var app = new Vue({
         el: '#app',
         data: {
-            recommendedList: [{
-                title: "xx",
-                price: "1.12"
-            }, {
-                title: "ss",
-                price: "2.12"
-            }, {
-                title: "aa",
-                price: "3.12"
-            }],
-            commodities: [{
-                title: "c1",
-                price: "12.12"
-            }, {
-                title: "c2",
-                price: "13.12"
-            }, {
-                title: "c3",
-                price: "14.12"
-            }]
-        }
-    })
+            recommendedList: [],
+            commodities: []
+        },
+        http: {
+            root: 'http://127.0.0.1:5555/',
+            headers: {
+                "X-Auth-Ticket": 'test token'
+            }
+        },
+        methods: actionMethods
+    });
+
+    app.loadRecommended();
+
 </script>
 </html>

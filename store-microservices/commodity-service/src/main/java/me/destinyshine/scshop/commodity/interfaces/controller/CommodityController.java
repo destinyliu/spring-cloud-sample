@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import me.destinyshine.scshop.commodity.application.CommodityService;
 import me.destinyshine.scshop.commodity.domain.Commodity;
-import me.destinyshine.scshop.commodity.interfaces.dto.CommodityDTO;
 
 
 /**
@@ -29,7 +28,7 @@ public class CommodityController {
     }
 
     @RequestMapping("")
-    public List<CommodityDTO> getCommodities(@RequestHeader("X-Last-Id") String lastId) {
-        return null;
+    public List<Commodity> getCommodities() {
+        return commodityService.getRecommendedCommodities();
     }
 }
