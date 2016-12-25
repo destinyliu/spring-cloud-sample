@@ -1,19 +1,19 @@
-package me.destinyshine.scshop.commodity;
+package me.destinyshine.scshop.eurekaserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
  * @author destinyliu
  */
 @EnableAutoConfiguration
 @SpringBootApplication
-@EnableDiscoveryClient
-public class ApplicationLauncher {
+@EnableEurekaServer
+public class EurekaServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ApplicationLauncher.class, args);
+        SpringApplication.run(EurekaServerApplication.class, args);
     }
 }

@@ -11,6 +11,7 @@
         <module>store-webadmin</module>
         <module>store-microservices</module>
         <module>framework</module>
+        <module>api-geteway</module>
     </modules>
 
     <parent>
@@ -38,6 +39,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
     <build>
         <pluginManagement>
             <plugins>

@@ -2,11 +2,15 @@ package me.destinyshine.scshop.commodity.interfaces.controller;
 
 import java.util.List;
 
-import me.destinyshine.scshop.commodity.interfaces.dto.CommodityDTO;
-import org.springframework.cloud.netflix.feign.EnableFeignClients;
+import javax.annotation.Resource;
+
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import me.destinyshine.scshop.commodity.application.CommodityService;
+import me.destinyshine.scshop.commodity.domain.Commodity;
+import me.destinyshine.scshop.commodity.interfaces.dto.CommodityDTO;
 
 
 /**
@@ -16,9 +20,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("commodities")
 public class CommodityController {
 
+    @Resource
+    private CommodityService commodityService;
+
     @RequestMapping("recommended")
-    public List<CommodityDTO> getRecommendedCommodities() {
-        return null;
+    public List<Commodity> getRecommendedCommodities() {
+        return commodityService.getRecommendedCommodities();
     }
 
     @RequestMapping("")

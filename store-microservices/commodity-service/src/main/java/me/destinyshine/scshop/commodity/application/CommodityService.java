@@ -2,8 +2,13 @@ package me.destinyshine.scshop.commodity.application;
 
 import java.util.List;
 
-import me.destinyshine.scshop.commodity.domain.Commodity;
+import javax.annotation.Resource;
+
 import org.springframework.stereotype.Service;
+
+import me.destinyshine.scshop.commodity.domain.Commodity;
+import me.destinyshine.scshop.commodity.infra.repository.CommodityRepository;
+import me.destinyshine.scshop.commodity.infra.repository.CommoditySearchOperator;
 
 
 /**
@@ -12,15 +17,21 @@ import org.springframework.stereotype.Service;
 @Service
 public class CommodityService {
 
-    public void create() {
+    @Resource
+    private CommodityRepository commodityRepository;
 
+    @Resource
+    private CommoditySearchOperator commoditySearchOperator;
+
+    public void create(Commodity commodity) {
+        commodityRepository.save(commodity);
     }
 
     public List<Commodity> getRecommendedCommodities() {
-        return null;
+        return commodityRepository.findAll();
     }
 
     public List<Commodity> getCommodities() {
-        return null;
+        return commodityRepository.findAll();
     }
 }

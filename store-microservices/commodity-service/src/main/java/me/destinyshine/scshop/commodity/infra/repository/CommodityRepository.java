@@ -1,18 +1,12 @@
 package me.destinyshine.scshop.commodity.infra.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+
 import me.destinyshine.scshop.commodity.domain.Commodity;
 
 /**
  * @author destinyliu
  */
-public class CommodityRepository {
-
-    public void save() {
-
-    }
-
-    public Commodity retrieve() {
-        return null;
-    }
+public interface CommodityRepository extends JpaRepository<Commodity, Long> {
 
 }
