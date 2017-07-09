@@ -2,13 +2,12 @@ package me.destinyshine.scshop.orders.application;
 
 import javax.annotation.Resource;
 
-import org.springframework.stereotype.Service;
-
 import me.destinyshine.scshop.orders.clients.CommodityClient;
 import me.destinyshine.scshop.orders.commands.OrderCreateCommand;
 import me.destinyshine.scshop.orders.domain.Order;
 import me.destinyshine.scshop.orders.domain.service.OrderCreateService;
 import me.destinyshine.scshop.orders.infra.repository.OrderRepository;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**

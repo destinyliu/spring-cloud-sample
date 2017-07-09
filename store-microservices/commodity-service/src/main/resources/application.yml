@@ -9,3 +9,9 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/scstore
     username: root
     password: root
+  cloud.config:
+    uri: http://localhost:8888
+
+server:
+  port: 0
+

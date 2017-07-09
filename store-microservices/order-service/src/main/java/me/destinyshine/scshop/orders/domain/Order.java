@@ -1,8 +1,8 @@
 package me.destinyshine.scshop.orders.domain;
 
-import me.destinyshine.commons.AggregateRoot;
-
 import java.util.List;
+
+import me.destinyshine.commons.AggregateRoot;
 
 /**
  * @author destinyliu
